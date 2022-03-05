@@ -26,4 +26,13 @@ public class PasswordValidatorTest {
         assertEquals(true, pv.isValid("Abc123"));
     }
 
+    @Test
+    public void testCharactersAreConsecutive() {
+        assertEquals(false, pv.validateNoneConsecutiveCharacters("AB1AC"));
+    }
+
+    @Test
+    public void testCharactersAreNotConsecutive() {
+        assertEquals(true, pv.validateNoneConsecutiveCharacters("A1ACEP"));
+    }
 }

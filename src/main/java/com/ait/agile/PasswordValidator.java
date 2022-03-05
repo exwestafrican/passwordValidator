@@ -11,8 +11,19 @@ public class PasswordValidator {
         return password.length() >= 5 && password.length() <= 10;
     }
 
-    public void doFoo() {
+    public boolean validateNoneConsecutiveCharacters(String password) {
 
+        for (int idx = 0; idx < password.length() - 1; idx++) {
+            char currentPasswordChar = password.charAt(idx);
+            char nextPasswordChar = password.charAt(idx + 1);
+
+            int nextAlphabet = (int) currentPasswordChar + 1;
+
+            if ((int) nextPasswordChar == nextAlphabet)
+                return false;
+
+        }
+        return true;
     }
 
 }

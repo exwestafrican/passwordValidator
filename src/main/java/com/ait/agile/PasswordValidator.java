@@ -11,4 +11,8 @@ public class PasswordValidator {
         return password.length() >= 5 && password.length() <= 10;
     }
 
+    public void doFoo() {
+
+    }
+
 }

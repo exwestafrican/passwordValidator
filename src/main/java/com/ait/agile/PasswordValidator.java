@@ -17,9 +17,9 @@ public class PasswordValidator {
             char currentPasswordChar = password.charAt(idx);
             char nextPasswordChar = password.charAt(idx + 1);
 
-            int nextAlphabet = (int) currentPasswordChar + 1;
+            int nextAlphabet = currentPasswordChar + 1;
 
-            if ((int) nextPasswordChar == nextAlphabet)
+            if (nextPasswordChar == nextAlphabet)
                 return false;
 
         }
